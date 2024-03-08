@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="458.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionevenement.Controllers.CommentaireController">
+
+    <Label layoutX="50.0" layoutY="100.0" text="Event ID" />
+    <!-- Remove the ID Commentaire label -->
+    <!-- Remove the ID Commentaire field -->
+    <Label layoutX="50.0" layoutY="180.0" text="User ID" />
+    <Label layoutX="50.0" layoutY="220.0" text="Contenu" />
+    <Label layoutX="50.0" layoutY="260.0" text="Note" />
+    <Label layoutX="50.0" layoutY="300.0" text="Date Commentaire" />
+
+    <ComboBox fx:id="eventIdComboBox" layoutX="150.0" layoutY="96.0" prefHeight="26.0" prefWidth="348.0" />
+    <!-- Remove the ID Commentaire field -->
+    <TextField fx:id="userIDField" layoutX="150.0" layoutY="176.0" prefHeight="26.0" prefWidth="348.0" />
+    <TextField fx:id="contenuField" layoutX="150.0" layoutY="216.0" prefHeight="26.0" prefWidth="348.0" />
+    <TextField fx:id="noteField" layoutX="150.0" layoutY="256.0" prefHeight="26.0" prefWidth="348.0" />
+
+    <Button layoutX="50.0" layoutY="350.0" onAction="#handleAddCommentaire" text="Add Commentaire" />
+    <Button layoutX="200.0" layoutY="350.0" onAction="#handleUpdateCommentaire" text="Update Commentaire" />
+    <Button layoutX="350.0" layoutY="350.0" onAction="#handleDeleteCommentaire" text="Delete Commentaire" />
+
+    <!-- Add TableView to display commentaires -->
+    <TableView fx:id="commentaireTableView" layoutX="508.0" layoutY="69.0" prefHeight="350.0" prefWidth="402.0">
+        <columns>
+            <!-- Remove the ID Commentaire column -->
+            <TableColumn fx:id="idEventColumn" text="ID Event" />
+            <TableColumn fx:id="userIDColumn" text="User ID" />
+            <TableColumn fx:id="contenuColumn" text="Contenu" />
+            <TableColumn fx:id="noteColumn" text="Note" />
+            <TableColumn fx:id="dateCommentaireColumn" text="Date Commentaire" />
+        </columns>
+    </TableView>
+   <DatePicker fx:id="datePicker" layoutX="164.0" layoutY="296.0" />
+   <Button layoutX="646.0" layoutY="28.0" onAction="#OnExport" prefHeight="26.0" prefWidth="106.0" text="Export" />
+    <!-- Replace the TextField with a DateTimePicker -->
+    <fx:define>
+        <Button fx:id="dateCommentairePicker" layoutX="150.0" layoutY="296.0" prefHeight="26.0" prefWidth="348.0" text="Pick Date" />
+    </fx:define>
+
+</AnchorPane>

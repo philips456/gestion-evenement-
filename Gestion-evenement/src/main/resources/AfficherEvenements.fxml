@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="JeanPane1" prefHeight="411.0" prefWidth="1080.0" styleClass="parent" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionevenement.Controllers.AfficherEvenementController">
+
+    <Label layoutX="50.0" layoutY="129.0" text="Titre" />
+    <TextField fx:id="titreField" layoutX="112.0" layoutY="129.0" prefHeight="26.0" prefWidth="348.0" />
+
+    <Label layoutX="50.0" layoutY="164.0" text="Capacite" />
+    <TextField fx:id="capaciteField" layoutX="112.0" layoutY="164.0" prefHeight="26.0" prefWidth="348.0" />
+
+    <Label layoutX="50.0" layoutY="199.0" text="Date" />
+    <TextField fx:id="dateField" layoutX="112.0" layoutY="199.0" prefHeight="26.0" prefWidth="348.0" />
+
+    <Label layoutX="50.0" layoutY="234.0" text="Description" />
+    <TextField fx:id="descriptionField" layoutX="112.0" layoutY="234.0" prefHeight="26.0" prefWidth="348.0" />
+
+    <Label layoutX="50.0" layoutY="269.0" text="Prix Ticket" />
+    <TextField fx:id="prixTicketField" layoutX="112.0" layoutY="269.0" prefHeight="26.0" prefWidth="348.0" />
+
+    <Label layoutX="50.0" layoutY="304.0" text="Lieu" />
+    <TextField fx:id="lieuField" layoutX="112.0" layoutY="304.0" prefHeight="26.0" prefWidth="348.0" />
+
+    <TableView fx:id="eventTableView" layoutX="496.0" layoutY="38.0" prefHeight="350.0" prefWidth="562.0">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="titreColumn" text="Titre" />
+            <TableColumn fx:id="capaciteColumn" text="Capacite" />
+            <TableColumn fx:id="dateColumn" text="Date" />
+            <TableColumn fx:id="descriptionColumn" text="Description" />
+            <TableColumn fx:id="prixTicketColumn" text="Prix Ticket" />
+            <TableColumn fx:id="lieuColumn" text="Lieu" />
+        </columns>
+    </TableView>
+
+    <Button layoutX="237.0" layoutY="54.0" onAction="#handleUpdateEvent" prefHeight="26.0" prefWidth="92.0" styleClass="next-button-widget" text="Mettre à Jour" />
+
+    <Button layoutX="136.0" layoutY="55.0" onAction="#handleDeleteEvent" prefHeight="18.0" prefWidth="92.0" styleClass="next-button-widget" text="Supprimer" />
+   <Button layoutX="344.0" layoutY="54.0" onAction="#OnAjouter" prefHeight="26.0" prefWidth="92.0" styleClass="next-button-widget" text="Ajouter" />
+   <Button layoutX="17.0" layoutY="14.0" onAction="#OnComment" prefHeight="18.0" prefWidth="92.0" styleClass="next-button-widget" text="Commentaire" />
+   <Button layoutX="494.0" layoutY="1.0" onAction="#OnExport" prefHeight="26.0" prefWidth="92.0" styleClass="next-button-widget" text="Export" />
+
+</AnchorPane>
